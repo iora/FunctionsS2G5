@@ -28,9 +28,9 @@ int main(void) {
 
 
 void printGroupMemberNames() {
-	printf("Name1\n ");
-	printf("Name2\n ");
-	printf("Name3\n ");
+	printf("James Bond\n ");
+	printf("BRad Pitt\n ");
+	printf("AJ\n ");
 	printf("That's it!\n");
 }
 
