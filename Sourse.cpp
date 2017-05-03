@@ -23,14 +23,37 @@ int main(void) {
 
 	return 1;
 }
-
-
-
+/*Calculate the sum of values in an array*/
+/*returns the sum of values in an array. */
+/*Chesda Keo*/
+int getSum(int myArray[]){
+    int i;
+    int sum = 0;
+        for( int i = 0; i < 500; i++)
+            sum += myArray[i];
+    return sum;
+    
+}
+/*Initialize squares*/
+/*Calculate and print squares*/
+/*returns the sum of values*/
+/*Chesda Keo*/
+int getSumOfSquares(int myArray[]){
+    int square;
+    int i;
+    int sum = 0;
+    int myArray[] = new int [500];
+    for( int i = 0; i < 500; i++){
+        square = myArray[i]*myArray[i];
+        sum += square;
+    }
+    return sum;
+}
 
 void printGroupMemberNames() {
 	printf("Panharith Leang\n ");
 	printf("Chesda Keo\n ");
-	printf(“Bunheng Lek\n ");
+	printf("AJ\n ");
 	printf("That's it!\n");
 }
 
