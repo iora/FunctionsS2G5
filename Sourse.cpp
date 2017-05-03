@@ -28,8 +28,8 @@ int main(void) {
 
 
 void printGroupMemberNames() {
-	printf("James Bond\n ");
-	printf("BRad Pitt\n ");
+	printf("Panharith Leang\n ");
+	printf("Chesda Keo\n ");
 	printf("AJ\n ");
 	printf("That's it!\n");
 }
