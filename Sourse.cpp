@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define n 30
 
 /*	
 *	Please define your functions after main().
@@ -17,10 +18,9 @@ void printGroupMemberNames();
 int main(void) {
 	printGroupMemberNames();
 
-	int row[500];
-	for (int i = 0; i < 500; i++)
+	int row[n];
+	for (int i = 0; i < n; i++)
 		row[i] = i;
-
 	return 1;
 }
 /*Calculate the sum of values in an array*/
@@ -29,7 +29,7 @@ int main(void) {
 int getSum(int myArray[]){
     int i;
     int sum = 0;
-        for( int i = 0; i < 500; i++)
+        for( int i = 0; i < n; i++)
             sum += myArray[i];
     return sum;
     
@@ -42,18 +42,69 @@ int getSumOfSquares(int myArray[]){
     int square;
     int i;
     int sum = 0;
-    int myArray[] = new int [500];
-    for( int i = 0; i < 500; i++){
+    for( int i = 0; i < n; i++){
         square = myArray[i]*myArray[i];
         sum += square;
     }
     return sum;
 }
+/*
+print each element of myArray as charactor
+*/
+void printAsChars(int myArray[]){
+    for(int i = 0; i < n; i++){
+        switch (myArray[i]){
+            case 1:
+                printf("one \t");
+                break;
+            case 2:
+                printf("two \t");
+                break;
+            case 3:
+                printf("three \t");
+                break;
+            case 4:
+                printf("four \t");
+                break;
+            case 5:
+                printf("five \t");
+                break;
+            case 6:
+                printf("six \t");
+                break;
+            case 7:
+                printf("seven \t");
+                break;
+            case 8:
+                printf("eight\t");
+                break;
+            case 9:
+                printf("nine \t");
+                break;
+            case 0:
+                printf("zero \t");
+                break;
+        }
+    }
+    return;
+}
+/*
+Compute the average of muArray
+*/
+double getAverage(int myArray[]){
+    int total = 0;
+    double answer;
+    for(int i = 0; i < n; i++){
+        total += myArray[i];
+    }
+    answer = total/n;
+    return answer;
+}
 
 void printGroupMemberNames() {
 	printf("Panharith Leang\n ");
 	printf("Chesda Keo\n ");
-	printf("AJ\n ");
-	printf("That's it!\n");
+	printf("Bunheng Lek\n ");
+	printf("Thanith rinhieng\n");
 }
 
