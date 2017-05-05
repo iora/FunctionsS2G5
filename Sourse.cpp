@@ -100,7 +100,16 @@ double getAverage(int myArray[]){
     answer = total/n;
     return answer;
 }
-
+/*
+Subtract 10000 with all the value in myArray
+*/
+int subtractAllValues(int myArray[]){
+    int values = 10000;
+    for(int i = 0; i < n; i++){
+        values -= myArray[i];
+    }
+    return values;
+}
 void printGroupMemberNames() {
 	printf("Panharith Leang\n ");
 	printf("Chesda Keo\n ");
