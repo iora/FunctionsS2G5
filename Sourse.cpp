@@ -110,10 +110,21 @@ int subtractAllValues(int myArray[]){
     }
     return values;
 }
+
+/* return the sum of the inverted element of myArray */
+float invertAllValues(int myArray[]){
+    float total = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        total += 1/myArray[i];
+    }
+    return total;
+}
 void printGroupMemberNames() {
 	printf("Panharith Leang\n ");
 	printf("Chesda Keo\n ");
 	printf("Bunheng Lek\n ");
 	printf("Thanith rinhieng\n");
 }
+
 
