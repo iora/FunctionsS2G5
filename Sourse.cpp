@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define n 30
 
 /*	
 *	Please define your functions after main().
@@ -18,8 +17,8 @@ void printGroupMemberNames();
 int main(void) {
 	printGroupMemberNames();
 
-	int row[n];
-	for (int i = 0; i < n; i++)
+	int row[500];
+	for (int i = 0; i < 500; i++)
 		row[i] = i;
 	return 1;
 }
@@ -29,7 +28,7 @@ int main(void) {
 int getSum(int myArray[]){
     int i;
     int sum = 0;
-        for( int i = 0; i < n; i++)
+        for( int i = 0; i < 500; i++)
             sum += myArray[i];
     return sum;
     
@@ -42,7 +41,7 @@ int getSumOfSquares(int myArray[]){
     int square;
     int i;
     int sum = 0;
-    for( int i = 0; i < n; i++){
+    for( int i = 0; i < 500; i++){
         square = myArray[i]*myArray[i];
         sum += square;
     }
@@ -51,42 +50,13 @@ int getSumOfSquares(int myArray[]){
 /*
 print each element of myArray as charactor
 */
-void printAsChars(int myArray[]){
-    for(int i = 0; i < n; i++){
-        switch (myArray[i]){
-            case 1:
-                printf("one \t");
-                break;
-            case 2:
-                printf("two \t");
-                break;
-            case 3:
-                printf("three \t");
-                break;
-            case 4:
-                printf("four \t");
-                break;
-            case 5:
-                printf("five \t");
-                break;
-            case 6:
-                printf("six \t");
-                break;
-            case 7:
-                printf("seven \t");
-                break;
-            case 8:
-                printf("eight\t");
-                break;
-            case 9:
-                printf("nine \t");
-                break;
-            case 0:
-                printf("zero \t");
-                break;
-        }
+void printAsChars(int myArray[]) {
+    int iCharLen = 500; //length
+    int i;
+    for (i = 0; i<iCharLen; i++)
+    {
+        printf("%c", myArray[i]);
     }
-    return;
 }
 /*
 Compute the average of muArray
@@ -94,7 +64,7 @@ Compute the average of muArray
 double getAverage(int myArray[]){
     int total = 0;
     double answer;
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < 500; i++){
         total += myArray[i];
     }
     answer = total/n;
@@ -105,20 +75,23 @@ Subtract 10000 with all the value in myArray
 */
 int subtractAllValues(int myArray[]){
     int values = 10000;
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < 500; i++){
         values -= myArray[i];
     }
     return values;
 }
 
 /* return the sum of the inverted element of myArray */
-float invertAllValues(int myArray[]){
-    float total = 0;
-    for (int i = 0; i < n; ++i)
-    {
-        total += 1/myArray[i];
-    }
-    return total;
+float invertAllValues(int myArray[]) 
+{
+    int myBrray[500];
+    int i;
+    float s = 0;
+    for (i = 0; i<500; ++i)
+        myBrray[i] = myArray[499 - i];
+    for (i = 0; i<500; ++i)
+        myArray[i] = myBrray[i];
+    return 0;
 }
 void printGroupMemberNames() {
 	printf("Panharith Leang\n ");
